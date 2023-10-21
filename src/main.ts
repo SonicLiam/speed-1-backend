@@ -11,7 +11,7 @@ const vercelURL = 'https://speed-1-frontend-chi.vercel.app/';
     origin: '*', // Replace with the actual origin of your frontend
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     preflightContinue : false,
-    credentials: true,
+    credentials: false,
   };
 
   async function bootstrap() {
