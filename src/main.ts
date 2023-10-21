@@ -5,7 +5,7 @@ import { ExpressAdapter } from '@nestjs/platform-express/adapters/express-adapte
 import { ClassSerializerInterceptor } from '@nestjs/common';
 
 // const localURL = 'http://localhost:3000';
-const vercelURL = 'https://speed-1-frontend-eight.vercel.app/';
+const vercelURL = 'https://speed-1-frontend-chi.vercel.app/';
 
   const CORS_OPTIONS = {
     origin: vercelURL, // Replace with the actual origin of your frontend
