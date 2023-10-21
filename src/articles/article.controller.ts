@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Controller, Post, Body, Get, Query } from '@nestjs/common';
+import { Controller, Post, Body, Get, Query, Options } from '@nestjs/common';
 import { ArticleService } from './article.service';
 import { Article } from './article.model';
 
@@ -16,6 +16,11 @@ export class ArticleController {
   @Get()
   async getAllArticles() {
     return await this.articleService.getAllArticles();
+  }
+
+  @Options()
+  async corsTest() {
+    return "";
   }
 
   @Get('search')
