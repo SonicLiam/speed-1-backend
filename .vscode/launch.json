@@ -1,0 +1,12 @@
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Nest Debug",
+  "program": "${workspaceFolder}/src/main.ts",
+  "preLaunchTask": "tsc: build - tsconfig.json",
+  "outFiles": [
+      "${workspaceFolder}/dist/**/*.js"
+  ],
+  "runtimeArgs": ["--nolazy", "--inspect-brk"],
+  "console": "integratedTerminal"
+}

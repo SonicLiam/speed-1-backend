@@ -63,7 +63,8 @@ const connectDB = async () => {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true,
-            useFindAndModify: false
+            useFindAndModify: false,
+            dbName: "Speed"
         });
 
         console.log('MongoDB is Connected...');
@@ -82,6 +83,7 @@ export async function connectToDatabase() {
     mongoose.set('strictQuery', true);
     const connection = await mongoose.connect(db, {
         useNewUrlParser: true,
+        dbName: "Speed"
     });
     dbInstance = connection;
     return dbInstance;

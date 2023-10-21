@@ -8,8 +8,9 @@ export class ArticleController {
   constructor(private readonly articleService: ArticleService) {}
 
   @Post()
-  async createArticle(@Body() articleDto: Partial<Article>): Promise<Article> {
-    return this.articleService.createArticle(articleDto); 
+  async createArticle(@Body() articleDto: Partial<Article>): Promise<boolean> {
+    const article = await this.articleService.createArticle(articleDto); 
+    return true;
   }
 
   @Get()

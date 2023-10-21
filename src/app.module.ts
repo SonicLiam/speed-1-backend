@@ -9,7 +9,7 @@ import { ClassSerializerInterceptor } from '@nestjs/common';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://benjaminmatthews794:123abc@cluster0.croouva.mongodb.net/?retryWrites=true&w=majority'),
+    MongooseModule.forRoot('mongodb+srv://benjaminmatthews794:123abc@cluster0.croouva.mongodb.net/Test?retryWrites=true&w=majority'),
     ArticleModule
   ],
   controllers: [AppController],
