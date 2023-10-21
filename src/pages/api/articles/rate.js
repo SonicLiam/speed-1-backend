@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
-import { connectToDatabase } from '../../../config/db';
-import { ArticleModel } from '../../../src/articles/article.model';
+import { connectToDatabase } from '../../../../config/db';
+import { ArticleModel } from '../../../articles/article.model';
 
 export default async (req, res) => {
 

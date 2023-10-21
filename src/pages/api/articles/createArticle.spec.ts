@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import createArticle from './createArticle';
-import { connectToDatabase } from '../../../config/db';
-import { ArticleModel } from '../../../src/articles/article.model';
+import { connectToDatabase } from '../../../../config/db';
+import { ArticleModel } from '../../../articles/article.model';
 
 // Mock the external dependencies
 jest.mock('../../config/db');

@@ -2,7 +2,7 @@
 import approveArticle from './approveArticle';
 const { connectToDatabase } = require('../../config/db');
 
-import { ArticleModel } from '../../../src/articles/article.model';
+import { ArticleModel } from '../../../articles/article.model';
 
 jest.mock('https://speed-1-backend-o3zc1j3ps-notreallybenjamins-projects.vercel.app/config/db'); // Mock the database connection
 jest.mock('https://speed-1-backend-o3zc1j3ps-notreallybenjamins-projects.vercel.app/src/articles/article.model'); // Mock the ArticleModel
