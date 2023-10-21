@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Controller, Post, Body, Get, Query, Options } from '@nestjs/common';
+import { Controller, Post, Body, Get, Query, Options, SerializeOptions } from '@nestjs/common';
 import { ArticleService } from './article.service';
 import { Article } from './article.model';
 
@@ -26,6 +26,17 @@ export class ArticleController {
   @Get('search')
   async findArticlesByTitle(@Query('keyword') keyword: string) {
     return await this.articleService.findArticlesByTitle(keyword);
+  }
+
+
+  @Post('approveArticle')
+  async approveArticle(@Query('_id') id: string): Promise<boolean> {
+    return await this.articleService.approveArticleById(id);
+  }
+
+  @Post('rejectArticle')
+  async rejectArticle(@Query('_id') id: string): Promise<boolean> {
+    return await this.articleService.rejectArticleById(id);
   }
 
 }

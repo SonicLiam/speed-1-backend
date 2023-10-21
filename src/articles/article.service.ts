@@ -16,13 +16,24 @@ export class ArticleService {
   }
 
   async getAllArticles(): Promise<Article[]> {
-    return await this.articleModel.find().lean().exec();
+    const res = await this.articleModel.find().lean().exec();
+    const res1 = res.map(i => { i.id = i._id.toString(); return i });
+    return res1;
   }
 
   async findArticlesByTitle(keyword: string): Promise<Article[]> {
     return await this.articleModel.find({ title: new RegExp(keyword, 'i') }).exec();
   }
   
+  async approveArticleById(id: string): Promise<boolean> {
+    const res = await this.articleModel.updateOne({ _id: id }, { $set: { approved: true, rejected: false } }).exec();
+    return res.modifiedCount > 0;
+  }
+
+  async rejectArticleById(id: string): Promise<boolean> {
+    const res = await this.articleModel.updateOne({ _id: id }, { $set: { approved: false, rejected: true } }).exec();
+    return res.modifiedCount > 0;
+  }
 
 
 }
