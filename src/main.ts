@@ -8,7 +8,7 @@ import { ClassSerializerInterceptor } from '@nestjs/common';
 const vercelURL = 'https://speed-1-frontend-chi.vercel.app/';
 
   const CORS_OPTIONS = {
-    origin: vercelURL, // Replace with the actual origin of your frontend
+    origin: '*', // Replace with the actual origin of your frontend
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     preflightContinue : false,
     credentials: true,
