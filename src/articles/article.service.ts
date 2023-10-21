@@ -16,7 +16,7 @@ export class ArticleService {
   }
 
   async getAllArticles(): Promise<Article[]> {
-    return await this.articleModel.find().exec();
+    return await this.articleModel.find().lean().exec();
   }
 
   async findArticlesByTitle(keyword: string): Promise<Article[]> {
