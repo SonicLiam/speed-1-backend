@@ -9,7 +9,7 @@ const vercelURL = 'https://speed-1-frontend-chi.vercel.app/';
 
   const CORS_OPTIONS = {
     origin: '*', // Replace with the actual origin of your frontend
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     preflightContinue : false,
     credentials: false,
   };
